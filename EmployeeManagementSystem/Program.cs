@@ -138,7 +138,7 @@ public class Program {
 	
 			Console.Write($"{text}: ");
 		}
-		
+
 		return true;
 	}
 
@@ -160,7 +160,7 @@ public class Program {
 	
 			Console.Write($"{text}: ");
 		}
-		
+
 		return true;
 	}
 
@@ -184,7 +184,7 @@ public class Program {
 	
 			Console.Write($"{text}: ");
 		}
-		
+
 		return true;
 	}
 
@@ -268,7 +268,6 @@ public class Program {
 				Console.WriteLine("Which role is your employee?");
 				Console.WriteLine("[1] - Developer");
 				Console.WriteLine("[2] - Designer");
-
 				string? choice = Console.ReadLine();
 				
 				if (string.IsNullOrWhiteSpace(choice) || choice.Length == 0 || (choice != "1" && choice != "2")) {
@@ -323,6 +322,9 @@ public class Program {
 					Employee employee = new Designer (id, name!, salary, department!, designTool!, specialization!);			
 					employeeList.Add(id,employee);
 				}
+
+				
+				Console.WriteLine($"< Creating completed. >");
 			}
 			
 			else if (commandInput == "Print All") {
@@ -373,7 +375,7 @@ public class Program {
                 else if (order == "Remove") {
                     if (employeeList.ContainsKey(id)) {
                         employeeList.Remove(id);
-                        Console.WriteLine("Removal Completed.");
+                        Console.WriteLine("< Removal Completed. >");
                     }
                     else Console.WriteLine("There's no employee with this Id, please try again later.");
                 }
@@ -443,6 +445,7 @@ public class Program {
 					}
 
                     else Console.WriteLine("There's no employee with this Id, please try again later.");
+					Console.WriteLine($"< Updating completed. >");
 				
 				}
                 else {
